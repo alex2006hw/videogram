@@ -1,0 +1,26 @@
+{
+  "name": "usrcoin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all run:chain run:client",
+    "stop": "pm2 stop all;pm2 kill",
+    "run:chain": "pm2 start chain.js",
+    "run:client": "pm2 start client.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coins": "^2.5.0",
+    "crypto": "^1.0.1",
+    "gun": "^0.9.991",
+    "lotion": "^0.1.17",
+    "npm-run-all": "^4.1.2",
+    "pm2": "^2.10.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
